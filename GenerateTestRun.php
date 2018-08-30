@@ -51,7 +51,6 @@ class GenerateTestRun{
 
         $yaml = (Yaml::parseFile(getcwd().'/behat.yml'));
 
-
         $this->yaml = $yaml;
         $extensions = $this->yaml['default']['extensions']['flexperto\BehatTestrailReporter\TestrailReporterExtension'];
 
@@ -97,7 +96,6 @@ class GenerateTestRun{
         }
 
         $decodedResponse = (json_decode($projectResponse));
-
         var_dump($projectResponse);
         die();
 
@@ -235,7 +233,7 @@ class GenerateTestRun{
         $this->yaml['default']['extensions']['flexperto\BehatTestrailReporter\TestrailReporterExtension']['runId'] = $decodedTestRun->id;
 
 
-        file_put_contents('/apps/php/hello-pipeline/behat.yml', Yaml::dump($this->yaml, 9));
+        file_put_contents('/behat.yml', Yaml::dump($this->yaml, 9));
 
     }
 
