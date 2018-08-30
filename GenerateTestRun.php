@@ -96,9 +96,7 @@ class GenerateTestRun{
         }
 
         $decodedResponse = (json_decode($projectResponse));
-        var_dump($projectResponse);
-        die();
-
+      
         foreach($decodedResponse as $decodedProject){
 
             if($decodedProject->name == $this->projectname) {
