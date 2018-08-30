@@ -1,5 +1,5 @@
 {
-    "name": "EntanetQA/testrail-api-run-create",
+    "name": "entanet-qa/testrail-api-run-create",
     "description": "Creates run on testrail using api creds",
     "require": {
         "behat/behat": "^3.5"
