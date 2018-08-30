@@ -96,7 +96,7 @@ class GenerateTestRun{
         }
 
         $decodedResponse = (json_decode($projectResponse));
-      
+
         foreach($decodedResponse as $decodedProject){
 
             if($decodedProject->name == $this->projectname) {
@@ -231,7 +231,7 @@ class GenerateTestRun{
         $this->yaml['default']['extensions']['flexperto\BehatTestrailReporter\TestrailReporterExtension']['runId'] = $decodedTestRun->id;
 
 
-        file_put_contents('/behat.yml', Yaml::dump($this->yaml, 9));
+        file_put_contents(getcwd().'/behat.yml', Yaml::dump($this->yaml, 9));
 
     }
 
