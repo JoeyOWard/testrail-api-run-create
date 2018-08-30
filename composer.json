@@ -1,0 +1,19 @@
+{
+    "name": "EntanetQA/testrail-api-run-create",
+    "description": "Creates run on testrail using api creds",
+    "require": {
+        "behat/behat": "^3.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joe Ward",
+            "email": "joe.ward@enta.net"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "TestrailAPIRunCreate\\": "packages/entanetQA/testrail-api-run-create"
+        }
+    }
+}
