@@ -4,6 +4,7 @@
     "require": {
         "behat/behat": "^3.5"
     },
+    "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
         {
