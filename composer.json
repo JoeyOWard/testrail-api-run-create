@@ -12,7 +12,6 @@
             "email": "joe.ward@enta.net"
         }
     ],
-    "version": "0.1",
     "autoload": {
         "psr-0": {
             "TestrailAPIRunCreate\\": "packages/entanetQA/testrail-api-run-create"
