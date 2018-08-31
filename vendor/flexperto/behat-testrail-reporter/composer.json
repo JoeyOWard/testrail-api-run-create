@@ -1,0 +1,27 @@
+{
+    "name": "flexperto/behat-testrail-reporter",
+    "type": "library",
+    "keywords": ["flexperto", "behat", "testrail"],
+    "homepage": "http://flexperto.com/",
+    "description": "Push behat test execution results to Testrail",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flexperto dev team",
+            "email": "info@flexperto.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+        "behat/behat": "~3.0",
+        "nategood/httpful": ">=v0.2.20"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "flexperto\\BehatTestrailReporter\\": "src/"
+        }
+    }
+}

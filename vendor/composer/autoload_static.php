@@ -12,6 +12,10 @@ class ComposerStaticInit1d1d31d648d539be4fffcc2893637a33
     );
 
     public static $prefixLengthsPsr4 = array (
+        'f' => 
+        array (
+            'flexperto\\BehatTestrailReporter\\' => 32,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -36,6 +40,10 @@ class ComposerStaticInit1d1d31d648d539be4fffcc2893637a33
     );
 
     public static $prefixDirsPsr4 = array (
+        'flexperto\\BehatTestrailReporter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/flexperto/behat-testrail-reporter/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -92,6 +100,13 @@ class ComposerStaticInit1d1d31d648d539be4fffcc2893637a33
             'TestrailAPIRunCreate\\' => 
             array (
                 0 => __DIR__ . '/../..' . '/packages/entanetQA/testrail-api-run-create',
+            ),
+        ),
+        'H' => 
+        array (
+            'Httpful' => 
+            array (
+                0 => __DIR__ . '/..' . '/nategood/httpful/src',
             ),
         ),
         'B' => 

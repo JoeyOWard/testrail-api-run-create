@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'TestrailAPIRunCreate\\' => array($baseDir . '/packages/entanetQA/testrail-api-run-create'),
+    'Httpful' => array($vendorDir . '/nategood/httpful/src'),
     'Behat\\Transliterator' => array($vendorDir . '/behat/transliterator/src'),
     'Behat\\Testwork' => array($vendorDir . '/behat/behat/src'),
     'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),

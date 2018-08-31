@@ -2,7 +2,8 @@
     "name": "entanet-qa/testrail-api-run-create",
     "description": "Creates run on testrail using api creds",
     "require": {
-        "behat/behat": "^3.5"
+        "behat/behat": "^3.5",
+        "flexperto/behat-testrail-reporter": "^1.1"
     },
     "minimum-stability": "stable",
     "license": "MIT",

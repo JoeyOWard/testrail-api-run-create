@@ -220,6 +220,104 @@
         "homepage": "https://github.com/container-interop/container-interop"
     },
     {
+        "name": "flexperto/behat-testrail-reporter",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/flexperto/behat-testrail-extension.git",
+            "reference": "e2ff5cab1a5255b53ef6eb7bb8d32dcfb0ea9a31"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/flexperto/behat-testrail-extension/zipball/e2ff5cab1a5255b53ef6eb7bb8d32dcfb0ea9a31",
+            "reference": "e2ff5cab1a5255b53ef6eb7bb8d32dcfb0ea9a31",
+            "shasum": ""
+        },
+        "require": {
+            "behat/behat": "~3.0",
+            "nategood/httpful": ">=v0.2.20",
+            "php": "^7.0"
+        },
+        "time": "2018-04-03T15:39:13+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "flexperto\\BehatTestrailReporter\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Flexperto dev team",
+                "email": "info@flexperto.com"
+            }
+        ],
+        "description": "Push behat test execution results to Testrail",
+        "homepage": "http://flexperto.com/",
+        "keywords": [
+            "Behat",
+            "flexperto",
+            "testrail"
+        ]
+    },
+    {
+        "name": "nategood/httpful",
+        "version": "0.2.20",
+        "version_normalized": "0.2.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nategood/httpful.git",
+            "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nategood/httpful/zipball/c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+            "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "*"
+        },
+        "time": "2015-10-26T16:11:30+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Httpful": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nate Good",
+                "email": "me@nategood.com",
+                "homepage": "http://nategood.com"
+            }
+        ],
+        "description": "A Readable, Chainable, REST friendly, PHP HTTP Client",
+        "homepage": "http://github.com/nategood/httpful",
+        "keywords": [
+            "api",
+            "curl",
+            "http",
+            "requests",
+            "rest",
+            "restful"
+        ]
+    },
+    {
         "name": "psr/container",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
