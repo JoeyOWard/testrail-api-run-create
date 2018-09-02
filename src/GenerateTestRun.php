@@ -61,6 +61,9 @@ class GenerateTestRun{
     }
 
 
+    /**
+     * @throws TestRailRunCreateException
+     */
     public function parseYaml(){
 
         if(array_key_exists('default', $this->yaml)){

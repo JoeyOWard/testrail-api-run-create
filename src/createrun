@@ -23,6 +23,7 @@ if($projectname == null || $projectname['name'] == null){
     die('Name is either blank or not added as a param. Append --name=');
 }
 
+
     $generate = new GenerateTestRun($projectname['name']);
     $generate->createNewRun();
 
