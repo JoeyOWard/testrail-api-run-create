@@ -154,7 +154,10 @@ class GenerateTestRun{
             throw new TestRailRunCreateException('Cannot find project via api');
         }
 
+
+
         $decodedResponse = (json_decode($projectResponse));
+
 
         foreach($decodedResponse as $decodedProject){
 
@@ -163,6 +166,10 @@ class GenerateTestRun{
                 $correctProject = $decodedProject;
 
             }
+        }
+
+        if($correctProject== null){
+            throw new TestRailRunCreateException('Specified project does not exist, please amend and try again');
         }
 
 
@@ -195,18 +202,19 @@ class GenerateTestRun{
 
         $decodedResponse = (json_decode($milestoneResponse));
 
-
         if(!Empty($decodedResponse)){
 
             if(count($decodedResponse) == 1) {
 
                 $this->milestone = ($decodedResponse[0]->id);
-                printf("Milestone found successfully...\n");
+                printf("Latest Milestone found successfully. Using " . $decodedResponse[0]->name . "... \n");
 
             }
             else{
                 throw new TestRailRunCreateException('Invalid number of Milestones returned. Create a milestone or complete legacy versions');
             }
+        }else{
+            printf ("No milestone setup, proceeding...\n");
         }
 
     }
@@ -302,7 +310,7 @@ class GenerateTestRun{
 
 
         printf("Updating behat.yml with test run id " . $decodedTestRun->id . "...\n");
-        printf("Please run behat to update your new test run...\n");
+        printf("Please run behat to update your new test run on TestRail...\n");
 
     }
 
