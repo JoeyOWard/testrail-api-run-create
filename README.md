@@ -7,9 +7,9 @@ This was made to help with pipelining Behat testing + testrail integration.
 
 The following package leverages BehatTestrailreporter but automatically:
 
-Creates a new test run for the project
-Uses the latest test suite for the test run
-Uses the currently active milestone for the test run
+Creates a new test run for the project \
+Uses the latest test suite for the test run \
+Uses the currently active milestone for the test run \
 Updates and reformats the Behat.yml so that the runId is the newly created run 
 
 Installing
@@ -39,18 +39,19 @@ Use
 Call CreateRun from project root. Append your project in testrail as a param
 
 ```bash
-$> php vendor/entanet-qa/testrail-api-run-create/src/createRun.php --name='Testing'
+$> php vendor/entanet-qa/testrail-api-run-create/createRun.php --name='Testing'
 ```
 
 Then call behat, if you have setup BehatTestrailReporter correctly, your new run on testrail wil be automatically updated. 
 
 
-Problems
+Known Issues
 ----------------
 
+Validation looks at behat.yml and asesses if has correct information and if keys and values are present and populated \
+Currently does not validate if value format is correct \
 
-Validation still needs work, this is a very early version
-
+ 
 
 Notes
 ----------------
