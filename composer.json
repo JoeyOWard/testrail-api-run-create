@@ -18,4 +18,6 @@
             "TestrailAPIRunCreate\\": "src/"
         }
     }
+
+    "bin": ["src/testrail-create-run"]
 }

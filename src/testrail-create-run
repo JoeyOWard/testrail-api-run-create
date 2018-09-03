@@ -17,14 +17,14 @@ if (is_file($autoload = getcwd() . '/vendor/autoload.php')) {
     require $autoload;
 }
 
-$projectname = getopt(null, ["name:"]);
+$projectname = getopt(null, ["project:"]);
 
-if($projectname == null || $projectname['name'] == null){
-    die('Name is either blank or not added as a param. Append --name=');
+if($projectname == null || $projectname['project'] == null){
+    die('Project name is either blank or not added as a param. Append --project=');
 }
 
 
-    $generate = new GenerateTestRun($projectname['name']);
+    $generate = new GenerateTestRun($projectname['project']);
     $generate->createNewRun();
 
 
