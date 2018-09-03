@@ -17,7 +17,7 @@
         "psr-0": {
             "TestrailAPIRunCreate\\": "src/"
         }
-    }
+    },
 
     "bin": ["src/testrail-create-run"]
 }
