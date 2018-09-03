@@ -100,11 +100,6 @@ class GenerateTestRun{
                             throw new TestRailRunCreateException("Behat yaml is missing apiKey value, test run creation aborting...\n");
                         }
                     }
-                    if(!(array_key_exists('runId', $extensionyaml))){
-
-                        throw new TestRailRunCreateException("Behat yaml is missing runId, test run creation aborting...\n");
-                    }
-
                 } else{
                     throw new TestRailRunCreateException("Behat yaml is missing flexperto testrailreporterextension, test run creation aborting...\n");
                 }
@@ -307,7 +302,6 @@ class GenerateTestRun{
     public function writeUpdatedYaml($decodedTestRun){
 
         $this->yaml['default']['extensions']['flexperto\BehatTestrailReporter\TestrailReporterExtension']['runId'] = $decodedTestRun->id;
-
 
         file_put_contents(getcwd().'/behat.yml', Yaml::dump($this->yaml, 9));
 
