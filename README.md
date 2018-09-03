@@ -38,7 +38,7 @@ Use
 Call CreateRun from project root. Append your project in testrail as a param
 
 ```bash
-$> vendor/entanet-qa/testrail-api-run-create/src/testrail-api-run-create --project='Testing'
+$> vendor/bin/testrail-api-run-create --project='Testing'
 ```
 
 Then call behat, if you have setup BehatTestrailReporter correctly, your new run on testrail wil be automatically updated. 
