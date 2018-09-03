@@ -29,7 +29,6 @@ Ensure that you have setup behat.yml to include:
             testidPrefix: test_rail_
             username: Your Username
             apiKey: Your API key
-            runId:
             customFields:
                 custom_environment: '1'
                 
