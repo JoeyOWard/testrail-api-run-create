@@ -49,12 +49,7 @@ class GenerateTestRun{
 
         $this->yaml = $yaml;
         $this->parseYaml();
-
-        $extensions = $this->yaml['default']['extensions']['flexperto\BehatTestrailReporter\TestrailReporterExtension'];
-
-        $this->baseUrl = $extensions['baseUrl'];
-        $this->username = $extensions['username'];
-        $this->apiKey = $extensions['apiKey'];
+        
         
         printf("Behat Yaml read successfully...\n");
 
@@ -79,6 +74,8 @@ class GenerateTestRun{
                     }else{
                         if(!(isset($extensionyaml['baseUrl']))){
                             throw new TestRailRunCreateException("Behat yaml is missing baseUrl value, test run creation aborting...\n");
+                        }else{
+                            $this->baseUrl = $extensionyaml['baseUrl'];
                         }
                     }
                     if(!(array_key_exists('username', $extensionyaml))){
@@ -87,7 +84,13 @@ class GenerateTestRun{
 
                     }else{
                         if(!(isset($extensionyaml['username']))){
-                            throw new TestRailRunCreateException("Behat yaml is missing username value, test run creation aborting...\n");
+                            $this->username = getenv('TESTRAILUSERNAME');
+                            if($this->username == null){
+                                throw new TestRailRunCreateException("Username is not populated or stored as global var and is null...\n");
+                            }
+
+                        }else{
+                            $this->username = $extensionyaml['username'];
                         }
                     }
 
@@ -97,7 +100,12 @@ class GenerateTestRun{
                     }else{
 
                         if(!(isset($extensionyaml['apiKey']))){
-                            throw new TestRailRunCreateException("Behat yaml is missing apiKey value, test run creation aborting...\n");
+                            $this->apiKey = getenv('TESTRAILAPIKEY');
+                            if ($this->apiKey == null){
+                                throw new TestRailRunCreateException("API Key is not stored as global var and is null...\n");
+                            }
+                        }else{
+                            $this->apiKey = $extensionyaml['apiKey'];
                         }
                     }
                 } else{
